@@ -1,0 +1,22 @@
+[
+  {
+    "src": "https://i.postimg.cc/XJz3XnXS/Picsart-25-06-26-18-59-00-235.jpg",
+    "caption": "რძის ნაწარმი",
+    "link": "https://example.com/page1"
+  },
+  {
+    "src": "https://i.postimg.cc/7LLZLsXz/Picsart-25-06-26-18-57-20-370.jpg",
+    "caption": "ცომეული",
+    "link": "https://example.com/page2"
+  },
+  {
+    "src": "https://i.postimg.cc/3R4rXksJ/Picsart-25-06-26-18-57-52-590.jpg",
+    "caption": "ხილი და ბოსტნეული",
+    "link": "https://example.com/page3"
+  },
+  {
+    "src": "https://i.postimg.cc/8PVkvPtN/Picsart-25-06-26-18-58-28-740.jpg",
+    "caption": "ხორცეული",
+    "link": "https://example.com/page4"
+  }
+]
