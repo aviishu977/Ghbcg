@@ -45,7 +45,7 @@ let selectedCategory = 'all';
 function checkServiceAvailability() {
   const now = new Date();
   const hour = now.getHours();
-  const isClosed = (hour >= 20) || (hour < 8);
+  const isClosed = (hour >= 20) || (hour < 19);
 
   if (isClosed) {
     if (!document.getElementById('serviceClosedMessage')) {
