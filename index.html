@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>FreshCart 2025 - კურიერის შეკვეთა</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="">
+  FreshCart
+</header>
+
+<button id="burgerButton" aria-label="მენიუს გახსნა/დახურვა" role="button" tabindex="0" aria-expanded="false" title="მენიუ" class="">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+
+<nav id="sideMenu" aria-label="საიტის ნავიგაცია" role="navigation" tabindex="-1" class="">
+  <button class="menu-item" data-section="rules">საიტის წესები</button>
+  <button class="menu-item" data-section="instructions">ინსტრუქცია</button>
+  <button class="menu-item" data-section="cities">მოქმედი ქალაქები</button>
+  <a href="mailto:nadashviligio707@gmail.com">
+    <button class="menu-item">კონტაქტი <br><br>ადმინისტრაციასთან</button>
+  </a>
+</nav>
+
+<div id="overlay" tabindex="-1" class=""></div>
+
+<section id="contentPanel" role="dialog" aria-modal="true" aria-labelledby="contentTitle" tabindex="-1" class="">
+  <button class="close-btn" aria-label="შინაარსის პანელის დახურვა">&times;</button>
+  <h3 id="contentTitle"></h3>
+  <div id="contentBody"></div>
+</section>
+
+<div id="modalOverlay" class="modal-overlay non-essential" tabindex="-1" aria-hidden="true"></div>
+
+<div id="orderModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDesc" tabindex="-1" hidden>
+  <div class="modal-content"><br>
+    <h2 id="modalTitle">შეკვეთის გაგზავნის შემდეგ</h2>
+    <section class="location-form" aria-label="შეკვეთის დეტალები">
+      <h2>თქვენი მონაცემები და მიწოდების მისამართი</h2>
+      <label for="fullName" class="sr-only">სრული სახელი და გვარი</label>
+      <input type="text" id="fullName" placeholder="სრული სახელი და გვარი" aria-required="true" autocomplete="name" />
+      <label for="phone" class="sr-only">ტელეფონის ნომერი (9 ციფრი)</label>
+      <input type="tel" id="phone" placeholder="ტელეფონის ნომერი (9 ციფრი)" minlength="9" maxlength="9" pattern="\\d{9}" aria-required="true" autocomplete="tel" inputmode="tel" />
+      <label for="address" class="sr-only">მისამართი</label>
+      <input type="text" id="address" placeholder="მისამართი" aria-required="true" autocomplete="street-address" />
+    </section>
+    <p id="modalDesc">
+      შეკვეთის გაგზავნის შემდეგ დაბრუნდით ვებსაიტზე და დააჭირეთ ღილაკს „გადახდა“. 
+      გადახდის გვერდზე მიუთითეთ თქვენი შეკვეთის სრული თანხა და „გამგზავნის ველში“ აუცილებლად ჩაწერეთ თქვენი შეკვეთის ნომერი — ეს აუცილებელია თქვენი გადახდის იდენტიფიკაციისთვის.
+    </p>
+    <div class="modal-buttons">
+      <button id="modalSendOrderBtn" type="button">შეკვეთის გაგზავნა</button>
+      <button id="modalPaymentBtn" type="button">გადახდა</button>
+    </div>
+    <button id="modalCloseBtn" class="modal-close" aria-label="მოდალის დახურვა">&times;</button>
+  </div>
+</div>
+
+<button id="cartButton" aria-label="კალათა" title="კალათა">კალათა</button>
+
+<main id="mainContent">
+
+  <section class="search-bar" aria-label="პროდუქტების ძებნა">
+    <input type="search" id="productSearch" placeholder="პროდუქტის ძიება..." aria-label="პროდუქტების ძებნა" autocomplete="off" />
+  </section>
+
+<section class="filter-section" aria-label="პროდუქტების ფილტრაცია">
+    <select id="categoryFilter" aria-label="აირჩიეთ კატეგორია">
+      <option value="all">ყველა კატეგორია</option>
+      <option value="რძის_პროდუქტები">რძის პროდუქტები</option>
+      <option value="საყხობი">ცომეული</option>
+      <option value="ხილი_ბოსტნეული">ხილი და ბოსტნეული</option>
+      <option value="ხორცი">ხორცეული</option>
+    </select>
+  </section>
+
+
+<div class="gallery-container non-essential" id="gallery-container">
+  <div class="gallery" id="gallery"></div>
+</div>
+
+
+
+
+  <div id="productContainer"></div>
+
+  <section id="order-summary" aria-live="polite" aria-atomic="true" aria-label="შეკვეთის შეჯამება">
+    <h3>კალათა</h3>
+    <div id="summaryItems">არცერთი პროდუქტი არ არის არჩეული</div>
+    <p>ჯამი: <span id="summaryTotal">₾0.00</span></p>
+  </section>
+</main>
+
+<footer>
+  <button type="button">შეკვეთის გაგზავნა</button>
+</footer>
+
+<div id="toast" role="alert" aria-live="assertive" aria-atomic="true"></div>
+
+<div id="adModal" class="modal non-essential" role="dialog" aria-modal="true" tabindex="-1" hidden>
+  <div class="modal-content ad-modal-content" tabindex="0">
+    <button id="adCloseBtn" class="modal-close" aria-label="რეკლამის დახურვა">&times;</button>
+    <img id="adImage" alt="რეკლამა" />
+    <br><br>
+    <h2>
+      თქვენი სლოგანის ადგილი.
+    </h2>
+    <p>
+      რეკლამის დამკვეთი კომპანია და სარეკლამო შინაარსის მოკლე აღწერა: რას წარმოადგენს, სად არის განთავსებული და რა მიზანს ემსახურება.
+    </p>
+  </div>
+</div>
+
+<div id="validationMessage">
+  <span id="validationText"></span>
+  <button id="validationCloseBtn" aria-label="შეტყობინების დახურვა">&times;</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
