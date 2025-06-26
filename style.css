@@ -634,7 +634,7 @@ footer button:active {
   justify-content: flex-start;
   align-items: center;
   box-shadow: 0 8px 24px var(--shadow);
-  z-index: 1350;
+  z-index: 1500;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
