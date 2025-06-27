@@ -267,13 +267,14 @@ main {
 
 /* Search bar */
 .search-bar {
+  width: 100%;
   margin-bottom: 20px;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 .search-bar input {
-  width: 23%;
-  padding: 15px 3%;
+  width: 30%;
+  padding: 15px 0px 15px 20px;
   border-radius: var(--radius) 0px 0px var(--radius);
   border: 1px solid var(--primary);
   background: var(--primary-soft);
@@ -299,13 +300,15 @@ main {
 }
 /* კატეგორიის ფილტრი */
 .filter-section {
+  width: 100%;
   margin: 0px;
   position: relative;
 }
 
 #categoryFilter {
   width: 100%;
-  padding: 12px 48px 12px 16px;
+  height: 100%;
+  padding: 1px 20px;
   border-radius: 0px var(--radius) var(--radius) 0px;
   border: 1px solid var(--primary);
   background: var(--bg-highlight);
