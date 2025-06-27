@@ -1,0 +1,115 @@
+<!DOCTYPE html><html lang="ka">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ZippyCart – სწრაფი საკურიერო აპლიკაცია სურსათის მარტივი შეკვეთისთვის საქართველოში.">
+  <title>ZippyCart – სწრაფი საკურიერო აპლიკაცია</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #0F172A;
+      --bg-card: #1E293B;
+      --bg-highlight: #273449;
+      --primary: #00C897;
+      --primary-soft: #00c89720;
+      --text-light: #F8FAFC;
+      --text-muted: #94A3B8;
+      --border-color: #334155;
+      --toast-bg: #00c897cc;
+      --closed-bg: #EF4444;
+      --radius: 16px;
+      --transition: 0.3s ease;
+      --menu-width: 280px;
+      --shadow: rgba(0, 0, 0, 0.5);
+    }
+    @font-face {
+      font-family: 'myffont';
+      src: url('alk-sanet.ttf');
+    }
+    * {
+      box-sizing: border-box;
+      font-family: 'myffont';
+    }
+    body {
+      margin: 0;
+      background: var(--bg-dark);
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+    header, footer {
+      padding: 1rem;
+      text-align: center;
+      background: var(--bg-card);
+    }
+    h1 {
+      font-size: 2rem;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      margin: 0.5rem;
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: var(--radius);
+      cursor: pointer;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    .btn:hover {
+      background: #00a97f;
+    }
+    .section {
+      padding: 2rem 1rem;
+      text-align: center;
+      background: var(--bg-highlight);
+      margin-bottom: 1rem;
+    }
+    .features i, .footer-icons i {
+      font-size: 2rem;
+      color: var(--primary);
+    }
+    .features div {
+      margin: 1rem 0;
+    }
+    .contact a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+    .contact a:hover {
+      text-decoration: underline;
+    }
+    footer .footer-icons a {
+      color: var(--text-muted);
+      margin: 0 0.5rem;
+      font-size: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><i class="bi bi-lightning-charge"></i> ZippyCart</h1>
+    <p>სწრაფი საკურიერო სერვისი საქართველოში</p>
+    <a class="btn" href="https://drive.google.com/file/d/1KEpxgsvxfkUAH50tUhnExOFqt_rDCHpO/view?usp=drivesdk" download>გადმოწერე Android ვერსია</a>
+  </header>  <section class="section features">
+    <h2>ფუნქციები</h2>
+    <div><i class="bi bi-cart-check"></i><p>მარტივი შეკვეთა</p></div>
+    <div><i class="bi bi-geo-alt"></i><p>მიწოდება აქტიურ ქალაქებში</p></div>
+    <div><i class="bi bi-wallet2"></i><p>სწრაფი გადახდა</p></div>
+    <div><i class="bi bi-shield-check"></i><p>დაცული მონაცემები</p></div>
+  </section>  <section class="section">
+    <h2>ვიდეო ინსტრუქცია</h2>
+    <iframe width="100%" height="250" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="ZippyCart Video Guide" frameborder="0" allowfullscreen></iframe>
+  </section>  <section class="section contact">
+    <h2>კონტაქტი</h2>
+    <p>თუ გაქვს კითხვა ან შენიშვნა, მოგვწერე <a href="mailto:nadashviligio707@gmail.com">ელ.ფოსტაზე</a>.</p>
+  </section>  <footer>
+    <div class="footer-icons">
+      <a href="https://www.facebook.com" target="_blank"><i class="bi bi-facebook"></i></a>
+      <a href="https://www.instagram.com" target="_blank"><i class="bi bi-instagram"></i></a>
+      <a href="mailto:nadashviligio707@gmail.com"><i class="bi bi-envelope"></i></a>
+    </div>
+    <p>&copy; 2025 ZippyCart. ყველა უფლება დაცულია.</p>
+  </footer>
+</body>
+</html>
